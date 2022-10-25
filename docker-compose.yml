@@ -3,11 +3,11 @@ services:
   web:
     image: 'gitlab/gitlab-ce:latest'
     restart: always
-    hostname: '127.0.0.1:82'
+    hostname: 'example.com'
     ports:
-      - '82:80'
+      - '1080:80'
       - '10443:443'
-      - '11022:22'
+      - '1022:22'
     volumes:
       - ./config:/etc/gitlab
       - ./logs:/var/log/gitlab
